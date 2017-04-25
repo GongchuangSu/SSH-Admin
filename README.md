@@ -16,6 +16,7 @@ A simple and practical Admin System based on SpringMVC、Spring、Hibernate and 
 # References
 1. [v3.bootcss](http://v3.bootcss.com/)
 2. [Bootstrap Sidebar Responsive Examples](http://blog.codeply.com/2016/05/18/bootstrap-sidebar-responsive-examples/)
+3. [Font Awesome](http://www.bootcss.com/p/font-awesome/)(The iconic font and CSS toolkit)
 
 # License
 GPL-3.0

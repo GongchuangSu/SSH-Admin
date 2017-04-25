@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html >
    <head>
       <meta charset="utf-8">
@@ -13,54 +13,19 @@
       <link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/bootstrap.min.css" />
       <!-- Custom styles for this template -->
       <link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/font-awesome.min.css" />
-      <link href="<%=request.getContextPath()%>/static/css/dashboard.css" rel="stylesheet">
+      <link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/dashboard.css">
    </head>
    <body >
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-         <div class="container-fluid">
-            <div class="navbar-header">
-               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-               <span class="sr-only">Toggle navigation</span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand" href="#">后台管理系统</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-               <ul class="nav navbar-nav navbar-left">
-                  <li><a href="#">首页</a></li>
-                  <li class="dropdown">
-                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
-                        aria-haspopup="true" aria-expanded="false">
-                     功能 <span class="caret"></span>
-                     </a>
-                     <ul class="dropdown-menu">
-                        <li><a href="#">功能一</a></li>
-                        <li><a href="#">功能二</a></li>
-                        <li><a href="#">功能三</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">功能四</a></li>
-                     </ul>
-                  </li>
-                  <li><a href="#">帮助</a></li>
-               </ul>
-               <form class="navbar-form navbar-right">
-                  <div class="form-group">
-                     <input type="text" class="form-control" placeholder="Search">
-                  </div>
-                  <button type="submit" class="btn btn-default">搜索</button>
-               </form>
-            </div>
-         </div>
-      </nav>
+      <%@include file="/WEB-INF/views/navigation.jsp"%>
       <!-- /.navbar -->
       <div class="container-fluid">
          <div class="row row-offcanvas row-offcanvas-right">
+            <p class="pull-right visible-xs">
+               <button type="button" class="btn btn-xs" data-toggle="offcanvas" title="切换侧边栏">
+               	  <i class="icon-circle-arrow-right icon-2x"></i> 
+               </button>
+            </p>
             <div class="col-xs-12 col-sm-9 col-sm-push-3">
-               <p class="pull-right visible-xs">
-                  <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas" title="Toggle sidebar"><i class="fa fa-chevron-right"></i></button>
-               </p>
                <div class="jumbotron">
                   <h1>Hello, world!</h1>
                   <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
@@ -108,63 +73,19 @@
             <!--/.col-xs-12.col-sm-9-->
             <div class="col-xs-6 col-sm-3 col-sm-pull-9 sidebar-offcanvas" id="sidebar">
                <div class="list-group">
-                  <a href="#" class="list-group-item active">I'm the Sidebar</a>
-                  <a href="#" class="list-group-item">Link</a>
-                  <a href="#" class="list-group-item">Link</a>
-                  <a href="#" class="list-group-item">Link</a>
-                  <a href="#" class="list-group-item">Link</a>
-                  <a href="#" class="list-group-item">Link</a>
-                  <a href="#" class="list-group-item">Link</a>
-                  <a href="#" class="list-group-item">Link</a>
-                  <a href="#" class="list-group-item">Link</a>
-                  <a href="#" class="list-group-item">Link</a>
+                  <a href="#" class="list-group-item active">功能列表</a>
+                  <a href="#" class="list-group-item">表格</a>
+                  <a href="#" class="list-group-item">图表统计</a>
+                  <a href="#" class="list-group-item">树形菜单</a>
+                  <a href="#" class="list-group-item">日期时间选择器</a>
                </div>
             </div>
             <!--/.sidebar-offcanvas-->
          </div>
          <!--/row-->
          <hr>
-         <footer>
-            <p>&copy; 2017 GongchuangSu, Inc.</p>
-         </footer>
+         <%@include file="/WEB-INF/views/footer.jsp"%>
       </div>
-      <!--/.container-->
-      <script>
-         // sandbox disable popups
-         if (window.self !== window.top && window.name!="view1") {;
-           window.alert = function(){/*disable alert*/};
-           window.confirm = function(){/*disable confirm*/};
-           window.prompt = function(){/*disable prompt*/};
-           window.open = function(){/*disable open*/};
-         }
-         
-         // prevent href=# click jump
-         document.addEventListener("DOMContentLoaded", function() {
-           var links = document.getElementsByTagName("A");
-           for(var i=0; i < links.length; i++) {
-             if(links[i].href.indexOf('#')!=-1) {
-               links[i].addEventListener("click", function(e) {
-               console.debug("prevent href=# click");
-                   if (this.hash) {
-                     if (this.hash=="#") {
-                       e.preventDefault();
-                       return false;
-                     }
-                     else {
-                       /*
-                       var el = document.getElementById(this.hash.replace(/#/, ""));
-                       if (el) {
-                         el.scrollIntoView(true);
-                       }
-                       */
-                     }
-                   }
-                   return false;
-               })
-             }
-           }
-         }, false);
-      </script>
       <!--scripts loaded here-->
       <script src="<%=request.getContextPath()%>/static/js/jquery.min.js"></script>
       <script src="<%=request.getContextPath()%>/static/js/bootstrap.min.js"></script>
