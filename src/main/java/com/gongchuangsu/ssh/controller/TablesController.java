@@ -15,15 +15,16 @@ import com.gongchuangsu.ssh.model.User;
 import com.gongchuangsu.ssh.service.UserService;
 
 @Controller
+@RequestMapping(value="tables")
 public class TablesController {
 	
 	@Autowired
 	private UserService userService;
 	
-	@RequestMapping(value = "tables", method = {RequestMethod.POST,RequestMethod.GET})
+	@RequestMapping(value = "basic-table", method = {RequestMethod.POST,RequestMethod.GET})
 	public ModelAndView home(HttpServletRequest request, 
 			HttpServletResponse response){		
-		ModelAndView mv = new ModelAndView("tables");
+		ModelAndView mv = new ModelAndView("basic-table");
 		String username = request.getParameter("username");
 		List<User> userList = userService.getAllUsers();
 		mv.addObject("username", username);

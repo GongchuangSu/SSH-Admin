@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
-<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html>
 <html >
    <head>
@@ -81,13 +80,13 @@
                         <i class="icon-table icon-large"><span>&nbsp;表格</span></i>
                      </a>
                      <div class="collapse pos-absolute" id="tables">
-                        <a href="tables/basic-table" data-toggle="collapse" data-target="#tables" class="list-group-item sub-item">
+                        <a href="basic-table" data-toggle="collapse" data-target="#tables" class="list-group-item sub-item active">
                            <span>&nbsp;&nbsp;<i class="icon-table"><span>&nbsp;基本表格</span></i></span>
                         </a>
-                        <a href="tables" data-toggle="collapse" data-target="#tables" class="list-group-item sub-item">
+                        <a href="#" data-toggle="collapse" data-target="#tables" class="list-group-item sub-item">
                            <span>&nbsp;&nbsp;<i class="icon-table"><span>&nbsp;响应式表格</span></i></span>
                         </a>
-                        <a href="tables" data-toggle="collapse" data-target="#tables" class="list-group-item sub-item">
+                        <a href="#" data-toggle="collapse" data-target="#tables" class="list-group-item sub-item">
                            <span>&nbsp;&nbsp;<i class="icon-table"><span>&nbsp;多功能表格</span></i></span>
                         </a>
                      </div>

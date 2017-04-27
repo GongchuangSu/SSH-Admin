@@ -3,7 +3,8 @@
 A simple and practical Admin System based on SpringMVC、Spring、Hibernate and Bootstrap. 
 
 # Features
-- Responsive sidebar navigation(left sidebar collapse to right-side push)  
+- Responsive sidebar navigation(left sidebar collapse to right-side push)(From [codeply](http://blog.codeply.com/2016/05/18/bootstrap-sidebar-responsive-examples/))  
+- Bootstrap collapsing submenu in dropdown(From [bootply](http://www.bootply.com/1u6VW4bsrR))
 
 # Requirement
 - Eclipse Version: Mars.2 Release (4.5.2)
@@ -17,6 +18,7 @@ A simple and practical Admin System based on SpringMVC、Spring、Hibernate and 
 1. [v3.bootcss](http://v3.bootcss.com/)
 2. [Bootstrap Sidebar Responsive Examples](http://blog.codeply.com/2016/05/18/bootstrap-sidebar-responsive-examples/)
 3. [Font Awesome](http://www.bootcss.com/p/font-awesome/)(The iconic font and CSS toolkit)
+4. [DataTables](https://datatables.net/)(Table plug-in for jQuery)
 
 # License
 GPL-3.0
