@@ -10,7 +10,7 @@
       <meta name="google" value="notranslate">
       <link rel="shortcut icon" href="<%=request.getContextPath()%>/static/img/avatar.png">
       <!-- Bootstrap -->
-      <link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="<%=request.getContextPath()%>/static/Bootstrap/css/bootstrap.min.css" />
       <!-- Custom styles for this template -->
       <link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/font-awesome.min.css" />
       <link rel="stylesheet" href="<%=request.getContextPath()%>/static/css/dashboard.css">
@@ -104,8 +104,8 @@
          <%@include file="/WEB-INF/views/footer.jsp"%>
       </div>
       <!--scripts loaded here-->
-      <script src="<%=request.getContextPath()%>/static/js/jquery.min.js"></script>
-      <script src="<%=request.getContextPath()%>/static/js/bootstrap.min.js"></script>
+      <script src="<%=request.getContextPath()%>/static/Bootstrap/js/jquery.min.js"></script>
+      <script src="<%=request.getContextPath()%>/static/Bootstrap/js/bootstrap.min.js"></script>
       <script>
          $(document).ready(function () {
          $('[data-toggle="offcanvas"]').click(function () {
