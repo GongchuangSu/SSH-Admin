@@ -84,8 +84,8 @@
                         <a href="tables/basic-table" data-toggle="collapse" data-target="#tables" class="list-group-item sub-item">
                            <span>&nbsp;&nbsp;<i class="icon-table"><span>&nbsp;基本表格</span></i></span>
                         </a>
-                        <a href="tables" data-toggle="collapse" data-target="#tables" class="list-group-item sub-item">
-                           <span>&nbsp;&nbsp;<i class="icon-table"><span>&nbsp;响应式表格</span></i></span>
+                        <a href="tables/editable-table" data-toggle="collapse" data-target="#tables" class="list-group-item sub-item">
+                           <span>&nbsp;&nbsp;<i class="icon-table"><span>&nbsp;可编辑表格</span></i></span>
                         </a>
                         <a href="tables" data-toggle="collapse" data-target="#tables" class="list-group-item sub-item">
                            <span>&nbsp;&nbsp;<i class="icon-table"><span>&nbsp;多功能表格</span></i></span>

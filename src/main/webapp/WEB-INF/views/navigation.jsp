@@ -8,11 +8,11 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
          </button>
-         <a class="navbar-brand" href="#">后台管理系统</a>
+         <a class="navbar-brand" href="/">后台管理系统</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
          <ul class="nav navbar-nav navbar-left">
-            <li><a href="#">首页</a></li>
+            <li><a href="/">首页</a></li>
             <li class="dropdown">
                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
                   aria-haspopup="true" aria-expanded="false">
