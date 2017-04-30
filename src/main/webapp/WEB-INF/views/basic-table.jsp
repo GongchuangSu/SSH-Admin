@@ -28,26 +28,50 @@
                </button>
             </p>
             <div class="col-xs-12 col-sm-9 col-sm-push-3">
-               <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
-                  <thead>
-                     <tr>
-                        <th>用户名</th>
-                        <th>性别</th>
-                        <th>手机号</th>
-                        <th>地址</th>
-                     </tr>
-                  </thead>
-                  <tbody>
-                     <c:forEach items="${userList}" var="user">
-                        <tr>
-                           <td>${user.username}</td>
-                           <td>${user.sex}</td>
-                           <td>${user.phonenumber}</td>
-                           <td>${user.emailaddress}</td>
-                        </tr>
-                     </c:forEach>
-                  </tbody>
-               </table>
+	            <div class="panel panel-primary">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">服务器端数据（直接请求）</h3>
+				  </div>
+				  <div class="panel-body">
+				    <table id="example_1" class="table table-striped table-bordered" cellspacing="0" width="100%">
+	                  <thead>
+	                     <tr>
+	                        <th>用户名</th>
+	                        <th>性别</th>
+	                        <th>手机号</th>
+	                        <th>地址</th>
+	                     </tr>
+	                  </thead>
+	                  <tbody>
+	                     <c:forEach items="${userList}" var="user">
+	                        <tr>
+	                           <td>${user.username}</td>
+	                           <td>${user.sex}</td>
+	                           <td>${user.phonenumber}</td>
+	                           <td>${user.emailaddress}</td>
+	                        </tr>
+	                     </c:forEach>
+	                  </tbody>
+	                </table>
+				  </div>
+				</div>
+	            <div class="panel panel-primary">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">服务器端数据（使用Ajax异步传输）</h3>
+				  </div>
+				  <div class="panel-body">
+				    <table id="example_2" class="table table-striped table-bordered" cellspacing="0" width="100%">
+	                  <thead>
+	                     <tr>
+	                        <th>用户名</th>
+	                        <th>性别</th>
+	                        <th>手机号</th>
+	                        <th>地址</th>
+	                     </tr>
+	                  </thead>
+	                </table>
+				  </div>
+				</div>
             </div>
             <!--/.col-xs-12.col-sm-9-->
             <div class="col-xs-6 col-sm-3 col-sm-pull-9 sidebar-offcanvas" id="sidebar">
@@ -98,12 +122,28 @@
          
          /* For DataTables */
          $(document).ready(function() {
-           $('#example').DataTable({
+           $('#example_1').DataTable({
               "scrollX":true,  /* 启用水平滚动 */
               "language":{     /* 中文版 */
             	  "url":"<%=request.getContextPath()%>/static/DataTables/language/Chinese.json"
               }
            });
+           
+           $('#example_2').DataTable({
+               "scrollX":true,  /* 启用水平滚动 */
+               "language":{     /* 中文版 */
+             	  "url":"<%=request.getContextPath()%>/static/DataTables/language/Chinese.json"
+               },
+               "ajax":{
+            	   url:'basic-table?keyword=example_2'
+               },
+               "columns":[
+                   {"data": "username"},
+                   {"data": "sex"},
+                   {"data": "phonenumber"},
+                   {"data": "emailaddress"}
+               ]
+            });
          });
       </script>
    </body>
