@@ -33,4 +33,19 @@ public class UserService implements IUserService{
 	public boolean userExists(String username) {
 		return userDao.userExists(username);
 	}
+
+	@Override
+	public void updateUser(User user) {
+		userDao.updateUser(user);
+	}
+
+	@Override
+	public void deleteUser(User user) {
+		userDao.deleteUser(user);
+	}
+
+	@Override
+	public void deleteUserById(long id) {
+		userDao.deleteUserById(id);
+	}
 }
