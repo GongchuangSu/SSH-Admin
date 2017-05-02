@@ -44,25 +44,6 @@
                         <th style="width: 125px;">操作</th>
                      </tr>
                   </thead>
-                  <tbody>
-                     <c:forEach items="${bookList}" var="book">
-                        <tr>
-                           <td>${book.isbn}</td>
-                           <td>${book.title}</td>
-                           <td>${book.author}</td>
-                           <td>${book.category}</td>
-                           <td>${book.price}</td>
-                           <td>
-                              <button class="btn btn-warning btn-sm" onclick="edit_book(${book.id});">
-                                 <i class="glyphicon glyphicon-pencil"></i>修改
-                              </button>
-                              <button class="btn btn-danger btn-sm" onclick="delete_book(${book.id});">
-                                 <i class="glyphicon glyphicon-remove"></i>删除
-                              </button>
-                           </td>
-                        </tr>
-                     </c:forEach>
-                  </tbody>
                </table>
             </div>
             <!--/.col-xs-12.col-sm-9-->
@@ -170,12 +151,34 @@
          });
          
          /* For DataTables */
+         var table;
          $(document).ready(function() {
-           $('#example').DataTable({
+           table = $('#example').DataTable({
               "scrollX":true,  /* 启用水平滚动 */
               "language":{     /* 中文版 */
             	  "url":"<%=request.getContextPath()%>/static/DataTables/language/Chinese.json"
-              }
+              },
+              "ajax":{
+           	      url:'editable-table?method=example'
+              },
+              "columns":[
+                   {"data": "isbn"},
+                   {"data": "title"},
+                   {"data": "author"},
+                   {"data": "category"},
+                   {"data": "price"},
+                   {"data": null}
+               ],
+               "columnDefs": [{
+            	   targets: 5,
+            	   render: function(data, type, row, meta) {
+            		   return '<td><button class="btn btn-warning btn-sm" onclick="edit_book('+row.id+');">'
+                       +'<i class="glyphicon glyphicon-pencil"></i>修改</button>'
+                       +'&nbsp&nbsp'
+                       +'<button class="btn btn-danger btn-sm" onclick="delete_book('+row.id+');">' 
+                       +'<i class="glyphicon glyphicon-remove"></i>删除</button><td>'
+            	   }
+               }]
            });
          });
          
@@ -230,8 +233,9 @@
                 type: "POST",
                 data: $('#form').serialize(),
                 success: function(data){
-                	$('#modal_form').modal('hide'); //if success close modal and reload ajax table
-                	location.reload(); // for reload a page
+                	//if success, close modal and reload ajax table
+                	$('#modal_form').modal('hide');
+                	table.ajax.reload();               	
                 },
          	    error: function(jqXHR, textStatus, errorThrown){
          	    	if(save_method == 'add')
@@ -250,7 +254,7 @@
         		    type: "POST",
         		    success: function(data)
         		    {
-        		    	location.reload();
+        		    	table.ajax.reload(); // reload ajax table
         		    },
         		    error: function(jqXHR, textStatus, errorThrown)
         		    {

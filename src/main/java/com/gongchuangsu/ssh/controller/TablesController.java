@@ -49,9 +49,10 @@ public class TablesController {
 	@RequestMapping(value = "editable-table", method = {RequestMethod.POST,RequestMethod.GET})
 	public ModelAndView editTable(HttpServletRequest request, 
 			HttpServletResponse response) throws IOException{		
-		String method = request.getParameter("method");
-		String save_method = request.getParameter("save_method");
-		String id = request.getParameter("id");
+		String method = request.getParameter("method");           // 操作方式：查询/删除Book
+		String save_method = request.getParameter("save_method"); // 保存方式: 更新/添加Book
+		String id = request.getParameter("id");                   // Book的id
+		/* 根据保存方式(save_method)的不同执行不同的操作  */
 		if("add".equals(save_method)){
 			Book bk = new Book();
 			bk.setIsbn(request.getParameter("isbn"));
@@ -69,15 +70,20 @@ public class TablesController {
 			bk.setPrice(Double.parseDouble(request.getParameter("price")));
 			bookService.updateBook(bk);
 		}
-		if("getBookById".equals(method)){
+		/* 根据操作方式(method)的不同执行不同的操作  */
+		if("getBookById".equals(method)){          // 根据id查询Book
 			response.setContentType("application/json");
 			String json = JSONArray.fromObject(bookService.getBookById(Integer.parseInt(id))).toString();
 			response.getWriter().write(json);
 			return null;
-		}else if("deleteBookById".equals(method)){
+		}else if("deleteBookById".equals(method)){ // 根据id删除Book
 			bookService.deleteBookById(Integer.parseInt(id));
 			return null;
-		}else{
+		}else if("example".equals(method)){
+			String json = "{\"data\":" + JSONArray.fromObject(bookService.getAllBooks()).toString() +"}";
+			response.getWriter().write(json);
+			return null;
+		}else{                                     // 查询所有的Book
 			ModelAndView mv = new ModelAndView("editable-table");
 			List<Book> bookList = bookService.getAllBooks();
 			mv.addObject("bookList", bookList);
