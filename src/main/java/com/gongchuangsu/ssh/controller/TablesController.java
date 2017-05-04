@@ -79,7 +79,7 @@ public class TablesController {
 		}else if("deleteBookById".equals(method)){ // ¸ù¾ÝidÉ¾³ýBook
 			bookService.deleteBookById(Integer.parseInt(id));
 			return null;
-		}else if("example".equals(method)){
+		}else if("example_2".equals(method)){
 			String json = "{\"data\":" + JSONArray.fromObject(bookService.getAllBooks()).toString() +"}";
 			response.getWriter().write(json);
 			return null;
