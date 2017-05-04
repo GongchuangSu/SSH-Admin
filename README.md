@@ -5,6 +5,7 @@ A simple and practical Admin System based on SpringMVC、Spring、Hibernate and 
 # Features
 - Responsive sidebar navigation(left sidebar collapse to right-side push)(From [codeply](http://blog.codeply.com/2016/05/18/bootstrap-sidebar-responsive-examples/))  
 - Bootstrap collapsing submenu in dropdown(From [bootply](http://www.bootply.com/1u6VW4bsrR))
+- Integrate CRUD using Java, Ajax, DataTables, jQuery and MySQL(From [phpcodify](http://www.phpcodify.com/codeigniter-crud-using-ajax-bootstrap-models-and-mysql/))
 
 # Requirement
 - Eclipse Version: Mars.2 Release (4.5.2)
