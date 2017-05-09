@@ -62,6 +62,13 @@ public class ChartsController {
 		}
 	}
 	
+	@RequestMapping(value = "pie-chart", method = {RequestMethod.POST,RequestMethod.GET})
+	public ModelAndView pieChart(HttpServletRequest request, 
+			HttpServletResponse response) throws IOException{
+		ModelAndView mv = new ModelAndView("pie-chart");
+		return mv;
+	}
+	
 	@RequestMapping(value = "macbooks", method = {RequestMethod.POST,RequestMethod.GET})
 	public ModelAndView macBookTable(HttpServletRequest request, 
 			HttpServletResponse response) throws IOException{		
