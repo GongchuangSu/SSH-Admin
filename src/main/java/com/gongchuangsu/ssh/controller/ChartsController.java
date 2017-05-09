@@ -69,6 +69,13 @@ public class ChartsController {
 		return mv;
 	}
 	
+	@RequestMapping(value = "others", method = {RequestMethod.POST,RequestMethod.GET})
+	public ModelAndView otherChart(HttpServletRequest request, 
+			HttpServletResponse response) throws IOException{
+		ModelAndView mv = new ModelAndView("other-charts");
+		return mv;
+	}
+	
 	@RequestMapping(value = "macbooks", method = {RequestMethod.POST,RequestMethod.GET})
 	public ModelAndView macBookTable(HttpServletRequest request, 
 			HttpServletResponse response) throws IOException{		
