@@ -28,7 +28,7 @@
             <a href="<%=basePath%>/charts/line-chart" id="line-chart" data-toggle="collapse" data-target="#charts" class="list-group-item sub-item">
                <span>&nbsp;&nbsp;<i class="icon-bar-chart"><span>&nbsp;折线图</span></i></span>
             </a>
-            <a href="<%=basePath%>/charts/histogram" id="histogram"  data-toggle="collapse" data-target="#charts" class="list-group-item sub-item">
+            <a href="<%=basePath%>/charts/bar-chart" id="bar-chart"  data-toggle="collapse" data-target="#charts" class="list-group-item sub-item">
                <span>&nbsp;&nbsp;<i class="icon-bar-chart"><span>&nbsp;柱状图</span></i></span>
             </a>
             <a href="<%=basePath%>/charts/pie-chart" id="pie-chart" data-toggle="collapse" data-target="#charts" class="list-group-item sub-item">

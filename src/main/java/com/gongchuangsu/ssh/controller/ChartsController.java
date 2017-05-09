@@ -44,6 +44,24 @@ public class ChartsController {
 		}
 	}
 	
+	@RequestMapping(value = "bar-chart", method = {RequestMethod.POST,RequestMethod.GET})
+	public ModelAndView barChart(HttpServletRequest request, 
+			HttpServletResponse response) throws IOException{
+		String action = request.getParameter("action");
+		/* json config for java.sql.Date */
+		JsonConfig jsonConfig = new JsonConfig();
+		DateJsonValueProcessor dateProcessor = new DateJsonValueProcessor("yyyy-MM-dd");
+		jsonConfig.registerJsonValueProcessor(java.sql.Date.class,dateProcessor);
+		if("getDataXY".equals(action)){
+			String json = JSONArray.fromObject(macBookService.getAllMacBooks(),jsonConfig).toString();
+			response.getWriter().write(json);
+			return null;
+		}else{
+			ModelAndView mv = new ModelAndView("bar-chart");
+			return mv;
+		}
+	}
+	
 	@RequestMapping(value = "macbooks", method = {RequestMethod.POST,RequestMethod.GET})
 	public ModelAndView macBookTable(HttpServletRequest request, 
 			HttpServletResponse response) throws IOException{		
