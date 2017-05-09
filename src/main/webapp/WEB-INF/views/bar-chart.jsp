@@ -128,6 +128,9 @@
                 text: 'Macbook Pro 价格柱状图',
                 subtext: '特性示例：渐变色 阴影 点击缩放'
             },
+            tooltip: {
+       	        trigger: 'axis'
+       	    },
             legend: {
        	        data:['Macbook Pro(2015)']
        	    },
@@ -142,12 +145,9 @@
                 z: 10
             },
             yAxis: {
-                axisLine: {
-                    show: false
-                },
-                axisTick: {
-                    show: false
-                },
+       	        min: 10000,
+       	        max: 12200,
+       	        interval: 200,
                 axisLabel: {
                     textStyle: {
                         color: '#999'
@@ -168,6 +168,7 @@
                     barGap:'-100%',
                     barCategoryGap:'40%',
                     data: [],
+                    tooltip:{trigger: 'none'},
                     animation: false
                 },
                 {
@@ -226,7 +227,7 @@
           		}]
            });
            /****************For myChart_2***************/
-           var yMax = 12000;
+           var yMax = 12200;
            var dataShadow = [];
            for (var i = 0; i < arrY.length; i++) {
                dataShadow.push(yMax);
