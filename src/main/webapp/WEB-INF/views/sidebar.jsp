@@ -34,11 +34,13 @@
             <a href="<%=basePath%>/charts/pie-chart" id="pie-chart" data-toggle="collapse" data-target="#charts" class="list-group-item sub-item">
                <span>&nbsp;&nbsp;<i class="icon-bar-chart"><span>&nbsp;饼状图</span></i></span>
             </a>
-            <a href="<%=basePath%>/charts/others" id="others" data-toggle="collapse" data-target="#charts" class="list-group-item sub-item">
+            <a href="<%=basePath%>/charts/others" id="other-charts" data-toggle="collapse" data-target="#charts" class="list-group-item sub-item">
                <span>&nbsp;&nbsp;<i class="icon-bar-chart"><span>&nbsp;其它</span></i></span>
             </a>
          </div>
-         <a href="#" class="list-group-item">树形菜单</a>
+         <a href="<%=basePath%>/treeview" id="treeview" class="list-group-item">
+            <i class="icon-folder-open-alt icon-large"><span>&nbsp;树形菜单</span></i>
+         </a>
          <a href="#" class="list-group-item">日期时间选择器</a>
       </div>
    </div>

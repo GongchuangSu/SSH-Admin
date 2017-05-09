@@ -21,7 +21,8 @@ A simple and practical Admin System based on SpringMVC、Spring、Hibernate and 
 2. [Bootstrap Sidebar Responsive Examples](http://blog.codeply.com/2016/05/18/bootstrap-sidebar-responsive-examples/)
 3. [Font Awesome](http://www.bootcss.com/p/font-awesome/)(The iconic font and CSS toolkit)
 4. [DataTables](https://datatables.net/)(Table plug-in for jQuery)
-5. [ECharts3](http://echarts.baidu.com/index.html)(a pure Javascript chart library)
+5. [ECharts3](http://echarts.baidu.com/index.html)(A pure Javascript chart library)
+6. [Bootstrap Tree View](https://github.com/jonmiles/bootstrap-treeview)(A simple and elegant solution to displaying hierarchical tree structures)
 
 # License
 GPL-3.0
