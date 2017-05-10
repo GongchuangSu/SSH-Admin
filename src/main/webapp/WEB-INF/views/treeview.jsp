@@ -52,6 +52,14 @@
 						      <div id="treeview_3"></div>
 						   </div>
 						</div>
+						<div class="row">
+						   <div class="col-sm-12">
+						      <h2>Ajax Data</h2>
+						      <div style="width: 250px;overflow: auto" class="nav-justified">
+						         <div id="treeview_4" style="width: 100%;height: 400px"></div>
+						      </div>						      			   
+						   </div>
+						</div>
 				    </div>
 				  </div>
 				</div>
@@ -77,60 +85,39 @@
            $('#treeview').toggleClass('active')
          });
          /* For TreeView */
-		 function getTree() {
-			 var tree = [
-	             {
-	               text: "方法一",
-	               tags: ['available'],
-	               nodes: [
-	                  {
-	                     text: "条件一",
-	                     nodes: [
-	                        {
-	                           text: "组别一"
-	                        },
-	                        {
-	                           text: "组别二"
-	                        }
-	                     ]
-	                  },
-	                  {
-	                	 text: "条件二",
-	                	 nodes: [
-	                	    {
-	                	       text: "组别一"
-	                	    }
-	                	 ]
-	                  }
-	               ]
-	             },
-	             {
-	               text: "方法二",
-	               nodes: [
-	                  {
-	                     text: "条件一",
-	                     nodes: [
-	                        {
-	                           text: "组别一"
-	                        }
-	                     ]
-	                  },
-	                  {
-	                	 text: "条件二",
-	                	 nodes: [
-	                	    {
-	                	       text: "组别一"
-	                	    },
-	                        {
-		                       text: "组别二"
-		                    }
-	                	 ]
-	                  }
-	               ]
-		        }	             
-			  ];
-		   return tree;
-		 }
+         function getTree() {
+        	 var tree = [{
+               "nodes": [
+                  {
+                     "nodes": [
+                        {
+                           "text": "机械1班"
+                        },
+                        {
+                           "text": "机械2班"
+                        },
+                        {
+                           "text": "机械3班"
+                        }
+                     ],
+                     "text": "机械专业"
+                  },
+                  {
+                     "nodes": [
+                        {
+                           "text": "测控1班"
+                        },
+                        {
+                           "text": "测控2班"
+                        }
+                     ],
+                     "text": "测控专业"
+                  }
+               ],
+               "text": "机械科学与工程学院"
+            }];
+        	return tree;
+         }
 		
 		 $('#treeview_1').treeview({
 			 data: getTree()
@@ -151,6 +138,25 @@
 	         collapseIcon: 'glyphicon glyphicon-folder-open',
 	         showBorder: false
 		 }); 
+         /* Load data from ajax */
+         $.ajax({
+           url: "treeview?action=getData",
+           type: "GET",
+           dataType: "json",
+           success: function(data){
+              $('#treeview_4').treeview({
+           	   data: JSON.stringify(data),
+	      		   levels: 99,
+	    		   color: "#428bca",
+	    	       expandIcon: 'glyphicon glyphicon-folder-close',
+	    	       collapseIcon: 'glyphicon glyphicon-folder-open',
+	    	       showBorder: false
+              });
+           },
+           error: function(jqXHR, textStatus, errorThrown){
+        	   alert('获取数据失败');
+           }
+         });
       </script>
    </body>
 </html>
