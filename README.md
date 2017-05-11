@@ -7,6 +7,9 @@ A simple and practical Admin System based on SpringMVC、Spring、Hibernate and 
 - Bootstrap collapsing submenu in dropdown(From [bootply](http://www.bootply.com/1u6VW4bsrR))
 - Integrate CRUD using Java, Ajax, DataTables, jQuery and MySQL(From [phpcodify](http://www.phpcodify.com/codeigniter-crud-using-ajax-bootstrap-models-and-mysql/))
 - Asynchronous Loading of chart data(From [ECharts3](http://echarts.baidu.com/tutorial.html#%E5%BC%82%E6%AD%A5%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E5%92%8C%E6%9B%B4%E6%96%B0))
+- Bootstrap Tree view implemented by Ajax and JDBC based on bootstrap-treeview(From [bootstrap-treeview](https://github.com/jonmiles/bootstrap-treeview))
+- Integrate datepicker using bootstrap-datepicker(From [bootstrap-datepicker](https://github.com/uxsolutions/bootstrap-datepicker))
+- Highlight code in web pages by loading the Prettify script(From [code-prettify](https://github.com/google/code-prettify))
 
 # Requirement
 - Eclipse Version: Mars.2 Release (4.5.2)
@@ -23,6 +26,8 @@ A simple and practical Admin System based on SpringMVC、Spring、Hibernate and 
 4. [DataTables](https://datatables.net/)(Table plug-in for jQuery)
 5. [ECharts3](http://echarts.baidu.com/index.html)(A pure Javascript chart library)
 6. [Bootstrap Tree View](https://github.com/jonmiles/bootstrap-treeview)(A simple and elegant solution to displaying hierarchical tree structures)
+7. [bootstrap-datepicker](https://github.com/uxsolutions/bootstrap-datepicker)(A datepicker for twitter bootstrap)
+8. [Code Prettifier](https://github.com/google/code-prettify)(An embeddable script that makes source-code snippets in HTML prettier)
 
 # License
 GPL-3.0
