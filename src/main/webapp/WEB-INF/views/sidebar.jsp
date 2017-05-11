@@ -41,7 +41,8 @@
          <a href="<%=basePath%>/treeview" id="treeview" class="list-group-item">
             <i class="icon-folder-open-alt icon-large"><span>&nbsp;树形菜单</span></i>
          </a>
-         <a href="#" class="list-group-item">日期时间选择器</a>
+         <a href="<%=basePath%>/datetimepicker" id="datetimepicker" class="list-group-item">
+         <i class="icon-calendar icon-large"><span>&nbsp;日期时间选择器</span></i></a>
       </div>
    </div>
 </div>
