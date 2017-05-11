@@ -8,16 +8,11 @@ public class TreeViewObj implements Serializable{
 
 	private String text;
 	
+	private String selfId;
+	
+	private String parentId;
+	
 	private ArrayList<TreeViewObj> nodes;
-	
-	public TreeViewObj(String text, ArrayList<TreeViewObj> nodes){
-		this.text = text;
-		this.nodes = nodes;
-	}
-	
-	public TreeViewObj(String text){
-		this.text = text;
-	}
 
 	public String getText() {
 		return text;
@@ -25,6 +20,22 @@ public class TreeViewObj implements Serializable{
 
 	public void setText(String text) {
 		this.text = text;
+	}
+
+	public String getSelfId() {
+		return selfId;
+	}
+
+	public void setSelfId(String selfId) {
+		this.selfId = selfId;
+	}
+
+	public String getParentId() {
+		return parentId;
+	}
+
+	public void setParentId(String parentId) {
+		this.parentId = parentId;
 	}
 
 	public ArrayList<TreeViewObj> getNodes() {

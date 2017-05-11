@@ -55,6 +55,14 @@
 						<div class="row">
 						   <div class="col-sm-12">
 						      <h2>Ajax Data</h2>
+						      <div style="padding-bottom: 10px">
+								 <button class="btn btn-primary btn-sm" onclick="expandAll();">
+							        <i class="glyphicon glyphicon-folder-open"></i>&nbsp全部展开
+								 </button>
+								 <button class="btn btn-primary btn-sm" onclick="collapseAll();">
+								    <i class="glyphicon glyphicon-folder-close"></i>&nbsp全部收缩
+							     </button>
+							  </div>
 						      <div style="width: 250px;overflow: auto" class="nav-justified">
 						         <div id="treeview_4" style="width: 100%;height: 400px"></div>
 						      </div>						      			   
@@ -138,7 +146,7 @@
 	         collapseIcon: 'glyphicon glyphicon-folder-open',
 	         showBorder: false
 		 }); 
-         /* Load data from ajax */
+         /* treeview_4: Load data from ajax */
          $.ajax({
            url: "treeview?action=getData",
            type: "GET",
@@ -157,6 +165,14 @@
         	   alert('获取数据失败');
            }
          });
+		 /* 全部展开 */
+		 function expandAll(){
+			 $('#treeview_4').treeview('expandAll');
+		 }
+		 /* 全部收缩 */
+		 function collapseAll(){
+			 $('#treeview_4').treeview('collapseAll');
+		 }
       </script>
    </body>
 </html>
