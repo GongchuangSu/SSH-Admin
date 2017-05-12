@@ -62,10 +62,7 @@
          <!--/row-->
          <hr>
          <%@include file="/WEB-INF/views/footer.jsp"%>
-      </div>
-      <!-- Bootstrap -->
-      <script src="<%=basepath%>/static/Bootstrap/js/jquery.min.js"></script>
-      <script src="<%=basepath%>/static/Bootstrap/js/bootstrap.min.js"></script>    
+      </div>   
       <!-- ECharts -->
       <script src="<%=basepath%>/static/ECharts/js/echarts.js"></script>
       <!-- For sidebar offcanvas -->

@@ -129,9 +129,6 @@
          <hr>
          <%@include file="/WEB-INF/views/footer.jsp"%>
       </div>
-      <!-- Bootstrap -->
-      <script src="<%=request.getContextPath()%>/static/Bootstrap/js/jquery.min.js"></script>
-      <script src="<%=request.getContextPath()%>/static/Bootstrap/js/bootstrap.min.js"></script>
       <!-- DateTimePicker -->
       <script src="<%=request.getContextPath()%>/static/DateTimePicker/js/bootstrap-datepicker.min.js"></script>
       <script src="<%=request.getContextPath()%>/static/DateTimePicker/language/bootstrap-datepicker.zh-CN.min.js"></script>

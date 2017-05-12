@@ -106,9 +106,6 @@
          </div>
          <!-- /.modal-dialog -->
       </div>
-      <!-- Bootstrap -->
-      <script src="<%=basepath%>/static/Bootstrap/js/jquery.min.js"></script>
-      <script src="<%=basepath%>/static/Bootstrap/js/bootstrap.min.js"></script>  
       <!-- DataTables -->
       <script src="<%=request.getContextPath()%>/static/DataTables/js/jquery.dataTables.min.js"></script>
       <script src="<%=request.getContextPath()%>/static/DataTables/js/dataTables.bootstrap.min.js"></script>   

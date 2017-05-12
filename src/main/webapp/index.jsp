@@ -20,12 +20,7 @@
       <!-- /.navbar -->
       <div class="container-fluid">
          <div class="row row-offcanvas row-offcanvas-right">
-            <p class="pull-right visible-xs">
-               <button type="button" class="btn btn-xs" data-toggle="offcanvas" title="切换侧边栏">
-               	  <i class="icon-circle-arrow-right icon-2x"></i> 
-               </button>
-            </p>
-            <div class="col-xs-12 col-sm-9 col-sm-push-3">
+            <div class="col-xs-12 col-sm-12">
                <div class="jumbotron">
                   <h1>Hello, world!</h1>
                   <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
@@ -70,8 +65,7 @@
                </div>
                <!--/row-->
             </div>
-            <!--/.col-xs-12.col-sm-9-->
-            <%@include file="/WEB-INF/views/sidebar.jsp" %> <!-- sidebar offcanvas for function list -->
+            <!--/.col-xs-12.col-sm-12-->
          </div>
          <!--/row-->
          <hr>
@@ -80,12 +74,5 @@
       <!--scripts loaded here-->
       <script src="<%=request.getContextPath()%>/static/Bootstrap/js/jquery.min.js"></script>
       <script src="<%=request.getContextPath()%>/static/Bootstrap/js/bootstrap.min.js"></script>
-      <script>
-         $(document).ready(function () {
-         $('[data-toggle="offcanvas"]').click(function () {
-           $('.row-offcanvas').toggleClass('active')
-         });
-         });
-      </script>
    </body>
 </html>

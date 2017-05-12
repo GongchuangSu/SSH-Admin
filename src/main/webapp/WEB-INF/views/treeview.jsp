@@ -79,9 +79,6 @@
          <hr>
          <%@include file="/WEB-INF/views/footer.jsp"%>
       </div>
-      <!-- Bootstrap -->
-      <script src="<%=request.getContextPath()%>/static/Bootstrap/js/jquery.min.js"></script>
-      <script src="<%=request.getContextPath()%>/static/Bootstrap/js/bootstrap.min.js"></script>
       <!-- Bootstrap Tree View -->
       <script src="<%=request.getContextPath()%>/static/TreeView/js/bootstrap-treeview.min.js"></script>
       <script>

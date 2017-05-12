@@ -54,10 +54,7 @@
          <!--/row-->
          <hr>
          <%@include file="/WEB-INF/views/footer.jsp"%>
-      </div>
-      <!-- Bootstrap -->
-      <script src="<%=basepath%>/static/Bootstrap/js/jquery.min.js"></script>
-      <script src="<%=basepath%>/static/Bootstrap/js/bootstrap.min.js"></script>  
+      </div> 
       <!-- DataTables -->
       <script src="<%=basepath%>/static/DataTables/js/jquery.dataTables.min.js"></script>
       <script src="<%=basepath%>/static/DataTables/js/dataTables.bootstrap.min.js"></script>   
