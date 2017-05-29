@@ -4,15 +4,15 @@ A simple and practical Admin System based on SpringMVC、Spring、Hibernate and 
 
 # Demo
 ## Main page
-![](http://i.imgur.com/iKuCi96.gif)
+![](http://i.imgur.com/BvQnQzi.gif)
 ## Table
-![](http://i.imgur.com/xereSbh.gif)
+![](http://i.imgur.com/5lA5Hgh.gif)
 ## Chart
-![](http://imgur.com/3MqlSJg)
+![](http://i.imgur.com/VofXDCk.gif)
 ## TreeView
-![](http://i.imgur.com/gmyXQg1.gif)
+![](http://i.imgur.com/829Nto9.gif)
 ## DateTimePicker
-![](http://i.imgur.com/N0Vd9Bn.gif)
+![](http://i.imgur.com/2V40QQ5.gif)
 
 # Features
 - Responsive sidebar navigation(left sidebar collapse to right-side push)(From [codeply](http://blog.codeply.com/2016/05/18/bootstrap-sidebar-responsive-examples/))  
