@@ -2,6 +2,18 @@
 [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://github.com/GongchuangSu/SSH-Admin)  [![CRAN](https://img.shields.io/cran/l/devtools.svg)](https://github.com/GongchuangSu/SSH-Admin)  
 A simple and practical Admin System based on SpringMVC、Spring、Hibernate and Bootstrap. 
 
+# Demo
+## Main page
+![](http://i.imgur.com/iKuCi96.gif)
+## Table
+![](http://i.imgur.com/xereSbh.gif)
+## Chart
+![](http://imgur.com/3MqlSJg)
+## TreeView
+![](http://i.imgur.com/gmyXQg1.gif)
+## DateTimePicker
+![](http://i.imgur.com/N0Vd9Bn.gif)
+
 # Features
 - Responsive sidebar navigation(left sidebar collapse to right-side push)(From [codeply](http://blog.codeply.com/2016/05/18/bootstrap-sidebar-responsive-examples/))  
 - Bootstrap collapsing submenu in dropdown(From [bootply](http://www.bootply.com/1u6VW4bsrR))
