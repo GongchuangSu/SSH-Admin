@@ -10,6 +10,7 @@ A simple and practical Admin System based on SpringMVC、Spring、Hibernate and 
 - Bootstrap Tree view implemented by Ajax and JDBC based on bootstrap-treeview(From [bootstrap-treeview](https://github.com/jonmiles/bootstrap-treeview))
 - Integrate datepicker using bootstrap-datepicker(From [bootstrap-datepicker](https://github.com/uxsolutions/bootstrap-datepicker))
 - Highlight code in web pages by loading the Prettify script(From [code-prettify](https://github.com/google/code-prettify))
+- Automatically update links in a navigation list based on scroll position(From [w3schools](https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_scrollspy2&stacked=h))
 
 # Requirement
 - Eclipse Version: Mars.2 Release (4.5.2)
@@ -28,6 +29,7 @@ A simple and practical Admin System based on SpringMVC、Spring、Hibernate and 
 6. [Bootstrap Tree View](https://github.com/jonmiles/bootstrap-treeview)(A simple and elegant solution to displaying hierarchical tree structures)
 7. [bootstrap-datepicker](https://github.com/uxsolutions/bootstrap-datepicker)(A datepicker for twitter bootstrap)
 8. [Code Prettifier](https://github.com/google/code-prettify)(An embeddable script that makes source-code snippets in HTML prettier)
+9. [Bootstrap Scrollspy Plugin](https://www.w3schools.com/bootstrap/bootstrap_scrollspy.asp)(Automatically update links in a navigation list)
 
 # License
 GPL-3.0
